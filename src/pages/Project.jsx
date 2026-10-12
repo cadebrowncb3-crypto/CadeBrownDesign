@@ -53,7 +53,7 @@ export default function Project() {
 
   const index = projects.indexOf(project);
   const next = projects[(index + 1) % projects.length];
-  const hasInfo = Boolean(project.role || project.tools || project.focus);
+  const hasInfo = Boolean(project.info || project.role || project.tools || project.focus);
 
   return (
     <main ref={ref} id="main" className={`page project ${hasInfo ? '' : 'project--bare'}`}>

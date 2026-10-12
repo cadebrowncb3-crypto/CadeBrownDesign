@@ -29,7 +29,8 @@ Netlify (**Add new site → Import an existing project**) or run
   [React Bits](https://github.com/DavidHDev/react-bits) (MIT + Commons Clause);
   each file notes its small adaptations
 - `src/lib/SmoothScroll.jsx` — Lenis ⇄ ScrollTrigger sync as documented in the Lenis README
-- `public/images/` — artwork extracted from the PDF (`tools/export_assets.py`) and
+- `public/images/` — artwork extracted from the PDF (`tools/export_assets.py`), the
+  album deck (`tools/album_images.py`) and
   web-sized copies of supplied originals (`tools/web_images.py`)
 - `source-images/` — full-size originals you uploaded (kept in git, not deployed)
 
@@ -41,5 +42,5 @@ Netlify (**Add new site → Import an existing project**) or run
 - Artwork is never filtered, recoloured or permanently cropped; reveals are
   clip-path masks on the frame.
 
-See `CONTENT_NOTES.md` for missing information and `IMAGE_REPLACEMENTS.md` for
+See `CONTENT_NOTES.md` for missing information (the on-site boxes are hidden) and `IMAGE_REPLACEMENTS.md` for
 images that need higher-resolution exports.

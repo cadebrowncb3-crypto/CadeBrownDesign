@@ -1,6 +1,21 @@
 /** The info table from the project slides: thick slate bars between label/value rows. */
 export default function ProjectInfo({ project }) {
   const rows = [];
+  // Projects may define their own rows: { label, text } or { label, list }.
+  project.info?.forEach((r) =>
+    rows.push({
+      label: r.label,
+      value: r.list ? (
+        <ul className="info__tools">
+          {r.list.map((t) => (
+            <li key={t}>{t}</li>
+          ))}
+        </ul>
+      ) : (
+        <p className={r.large ? 'info__focus' : 'info__role'}>{r.text}</p>
+      )
+    })
+  );
   if (project.kind && project.focus) rows.push({ label: project.kind, value: <p className="info__focus">{project.focus}</p> });
   if (project.role) rows.push({ label: 'Role', value: <p className="info__role">{project.role}</p> });
   if (project.tools)

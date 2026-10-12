@@ -5,7 +5,7 @@
 // Set to false once the missing information below has been supplied (or you
 // decide to publish without it). While true, dashed "content needed" notes are
 // shown on the pages where information is missing.
-export const SHOW_CONTENT_NOTES = true;
+export const SHOW_CONTENT_NOTES = false;
 
 export const site = {
   name: 'Cade Brown',

@@ -5,6 +5,11 @@
 [build.environment]
   NODE_VERSION = "22"
 
+[[redirects]]
+  from = "/work/posters"
+  to = "/work/nothing-but-time"
+  status = 301
+
 # Client-side routes (/work/..., /about) fall back to the SPA shell.
 [[redirects]]
   from = "/*"

@@ -65,7 +65,7 @@ export default function Home() {
         </div>
         <div className="hero__meta">
           <span>{site.name}</span>
-          <span>Editorial · Branding · Posters</span>
+          <span>Editorial · Branding · Album Design</span>
           <span>{site.tagline}</span>
         </div>
       </section>

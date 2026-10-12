@@ -2,9 +2,9 @@
 
 Everything written on the site is quoted from `Cade_Brown_Portfolio.pdf`.
 No project details, achievements or contact details were invented.
-While `SHOW_CONTENT_NOTES` in `src/data/site.js` is `true`, the site shows a
-dashed red "content needed" box wherever information is missing. Fill in the
-gaps in `src/data/site.js` / `src/data/projects.js`, then set it to `false`.
+The dashed red "content needed" boxes are now **hidden** on the site
+(`SHOW_CONTENT_NOTES = false` in `src/data/site.js`). This file keeps the list
+of what is still missing; set the flag to `true` to show the boxes again.
 
 ## Missing information
 
@@ -20,12 +20,14 @@ gaps in `src/data/site.js` / `src/data/projects.js`, then set it to `false`.
 **Branding — Momentum3**
 - Year, course/institution, and what Momentum3 actually is — the PDF describes the identity work but not the brand.
 
-**Posters**
-- The PDF shows five posters with no text at all: no titles, descriptions, dates, role, tools, or whether they were academic, personal or client work. Image alt text describes only what is visible.
-
 **Experience — Media Production Group, Auburn University**
 - Internship dates and job title.
 - No images of the We Spoke Podcast identity or the event-promotion assets mentioned in the text.
+
+## Album Package Design — Nothing But Time
+- Source: `EP-Presentation-CadeBrown.pptx`. All page text is taken from the slides; the speaker notes (presenter reminders) were not used.
+- The research slide's reference images (David Carson, Rad Future) are other artists' work, so the site lists those references as text only.
+- The old Posters page was removed; `/work/posters` redirects to `/work/nothing-but-time` on Netlify.
 
 ## Derived (not stated as text in the PDF)
 - Momentum3 palette hex values (#111313, #E0E31B, #F3F2EE) were sampled from the swatches on slide 8 — confirm against your brand file.

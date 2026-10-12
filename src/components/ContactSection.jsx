@@ -3,7 +3,7 @@ import { gsap, useGSAP, FULL_MOTION } from '../lib/gsap';
 import SplitText from './reactbits/SplitText';
 import Magnet from './reactbits/Magnet';
 import ContentNote from './ContentNote';
-import { site, contactMissing } from '../data/site';
+import { site, contactMissing, SHOW_CONTENT_NOTES } from '../data/site';
 
 /** Slide 15, "Get in touch", rebuilt as a section that closes every page. */
 export default function ContactSection() {
@@ -68,9 +68,13 @@ export default function ContactSection() {
           </a>
           <span className="contact__line">{site.handle}</span>
         </div>
-        <div className="contact__cell contact__cell--note">
-          <ContentNote items={contactMissing} />
-        </div>
+        {SHOW_CONTENT_NOTES ? (
+          <div className="contact__cell contact__cell--note">
+            <ContentNote items={contactMissing} />
+          </div>
+        ) : (
+          <div className="contact__cell" aria-hidden="true" />
+        )}
       </div>
       <div className="contact__bar" aria-hidden="true" />
     </section>
