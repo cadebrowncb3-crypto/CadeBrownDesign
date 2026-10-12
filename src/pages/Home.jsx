@@ -31,7 +31,7 @@ export default function Home() {
           { clipPath: 'inset(0% 0% 0% 0%)', duration: 2, ease: 'power3.inOut', delay: 0.2 }
         );
         gsap.from('.hero__meta > *', { y: 20, opacity: 0, duration: 1, ease: 'power4.out', stagger: 0.1, delay: 1.2 });
-        gsap.to('.hero__art img', {
+        gsap.to('.hero__stage', {
           yPercent: 8,
           ease: 'none',
           scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true }
@@ -58,7 +58,10 @@ export default function Home() {
           {site.name} — {site.tagline}
         </h1>
         <div className="hero__art">
-          <img src={COVER.src} alt={COVER.alt} width={COVER.w} height={COVER.h} fetchPriority="high" />
+          <div className="hero__stage" style={{ '--cover': `url(${COVER.src})` }}>
+            <img src={COVER.src} alt={COVER.alt} width={COVER.w} height={COVER.h} fetchPriority="high" />
+            <span className="hero__bleed" aria-hidden="true" />
+          </div>
         </div>
         <div className="hero__meta">
           <span>{site.name}</span>

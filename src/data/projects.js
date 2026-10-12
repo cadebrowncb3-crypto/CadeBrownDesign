@@ -73,10 +73,10 @@ export const projects = [
     // not official brand specs).
     palette: ['#111313', '#e0e31b', '#f3f2ee'],
     cover: img(
-      '/images/momentum3/event-arch.jpg',
-      2116,
-      1322,
-      'Momentum3 branded start arch on a snowy mountain course, with the pixel-arrow mark and MOMENTUM³ wordmark in yellow on black.'
+      '/images/momentum3/event-arch.webp',
+      1584,
+      993,
+      'Momentum3 start arch on a snowy mountain course: black and yellow graphics with the pixel-arrow mark, MOMENTUM³ wordmark, “Stop 03” and “Never idle”.'
     ),
     hero: img(
       '/images/momentum3/athlete-wetsuit.jpg',
@@ -88,42 +88,28 @@ export const projects = [
       {
         type: 'feature',
         image: img(
-          '/images/momentum3/event-arch.jpg',
-          2116,
-          1322,
-          'Momentum3 branded start arch on a snowy mountain course, with the pixel-arrow mark and MOMENTUM³ wordmark in yellow on black.'
-        )
+      '/images/momentum3/event-arch.webp',
+      1584,
+      993,
+      'Momentum3 start arch on a snowy mountain course: black and yellow graphics with the pixel-arrow mark, MOMENTUM³ wordmark, “Stop 03” and “Never idle”.'
+    )
       },
       {
         type: 'grid',
-        label: 'Merchandise',
-        columns: 3,
+        label: 'Merchandise & event',
+        columns: 2,
         images: [
-          img('/images/momentum3/beanie.webp', 336, 448, 'Black Momentum3 beanie with a vertical yellow wordmark tag.', {
-            lowRes: true,
-            bg: '#ffffff'
-          }),
-          img(
-            '/images/momentum3/beanie-and-cap.jpg',
-            1373,
-            863,
-            'Black Momentum3 beanie and five-panel cap with yellow contrast stitching and the embroidered logo.'
-          ),
-          img(
-            '/images/momentum3/hoodie.jpg',
-            384,
-            416,
-            'White hoodie with a grey sleeve stripe and a yellow Momentum3 graphic band across the chest.',
-            { lowRes: true }
-          )
+          img('/images/momentum3/beanie.webp', 1509, 2000, 'Black ribbed Momentum3 beanie with glitch-style yellow knit marks and a vertical yellow wordmark tag on the cuff.'),
+          img('/images/momentum3/cap.webp', 1507, 2000, 'Black five-panel Momentum3 cap with yellow contrast stitching, embroidered pixel-arrow mark and MOMENTUM³ wordmark, brown leather strap.'),
+          img('/images/momentum3/lanyard-badge.webp', 2000, 1760, 'Yellow Momentum3 lanyard with distressed black wordmark print, holding a collage-style athlete credential listing name, country and stance.'),
+          img('/images/momentum3/hoodie.webp', 1494, 2000, 'White hoodie with black sleeve panels and a black-and-yellow Momentum3 graphic band across the chest reading “EST 2026”.')
         ]
       }
     ],
     missing: [
       'Year / date of the project',
       'Course or institution the academic project was for',
-      'What Momentum3 is (the PDF does not describe the brand itself)',
-      'Higher-resolution beanie and hoodie mockups (see IMAGE_REPLACEMENTS.md)'
+      'What Momentum3 is (the PDF does not describe the brand itself)'
     ]
   },
   {

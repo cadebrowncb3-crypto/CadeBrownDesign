@@ -308,9 +308,50 @@ button {
   overflow: hidden;
 }
 
-.hero__art img {
-  width: 100%;
+/* The cover art is framed exactly as on slide 1 of the PDF: on a 16:9 slide of
+   width --s the image is 103.85% wide and sits 4.57% down, so its horizontal
+   lines run off the right edge. The hero fills the viewport below the header;
+   when the screen is wider than 16:9 the slide is height-limited and the two
+   horizontal lines are continued to the screen edge (same colour/thickness). */
+.hero__art {
+  position: relative;
+  height: min(56.25vw, calc(100svh - var(--header-h)));
+  min-height: 180px;
+  container-type: size;
+  overflow: hidden;
+}
+
+.hero__stage {
+  --s: min(100cqw, calc(100cqh / 0.5625));
+  position: absolute;
+  inset: 0;
   will-change: transform;
+}
+
+.hero__stage img {
+  position: absolute;
+  left: 0;
+  top: calc(var(--s) * 0.0457);
+  width: calc(var(--s) * 1.0385);
+  max-width: none;
+  height: auto;
+}
+
+.hero__bleed {
+  /* Continues the artwork's two horizontal lines by stretching the image's
+     own pixels just before the lines end (x ≈ 3930 of 4096, where only the
+     lines are present), so colour, thickness and edge anti-aliasing match. */
+  --img-w: calc(var(--s) * 1.0385);
+  --k: 400;
+  position: absolute;
+  left: calc(var(--img-w) * 3947 / 4096);
+  right: 0;
+  top: calc(var(--s) * 0.0457);
+  height: calc(var(--s) * 0.53041);
+  background-image: var(--cover);
+  background-repeat: no-repeat;
+  background-size: calc(var(--img-w) * var(--k)) 100%;
+  background-position: calc(var(--img-w) * var(--k) * -3930 / 4096) 0;
 }
 
 .hero__meta {
@@ -723,6 +764,15 @@ button {
 
 .gallery__cell + .gallery__cell {
   border-left: var(--rule) solid var(--ink);
+}
+
+/* Two-column grids that wrap onto more rows: rule between columns and rows only */
+.gallery__grid--2 .gallery__cell:nth-child(odd) {
+  border-left: 0;
+}
+
+.gallery__grid--2 .gallery__cell:nth-child(n + 3) {
+  border-top: var(--rule) solid var(--ink);
 }
 
 .spreads__item--single .reveal {
