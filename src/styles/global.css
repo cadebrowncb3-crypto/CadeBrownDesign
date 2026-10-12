@@ -1080,6 +1080,34 @@ em {
   align-self: center;
 }
 
+.figure__note {
+  display: block;
+  margin-top: 4px;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--ink-soft);
+}
+
+/* Bleed grid: artwork fills each tile edge to edge (e.g. logo marks on their
+   own colour fields); captions sit underneath, left-aligned. */
+.gallery__grid--bleed .gallery__cell {
+  padding: 0;
+  background: none;
+  align-items: stretch;
+}
+
+.gallery__grid--bleed .reveal {
+  outline: 1px solid var(--line);
+  outline-offset: -1px;
+}
+
+.gallery__grid--bleed .figure__caption {
+  align-self: flex-start;
+  margin-top: 14px;
+}
+
 .spreads {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));

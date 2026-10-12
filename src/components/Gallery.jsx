@@ -3,7 +3,12 @@ import RevealImage from './RevealImage';
 const Figure = ({ image, delay, sizes, className = '' }) => (
   <figure className={`figure ${className}`}>
     <RevealImage image={image} delay={delay} sizes={sizes} />
-    {image.caption && <figcaption className="figure__caption">{image.caption}</figcaption>}
+    {image.caption && (
+      <figcaption className="figure__caption">
+        {image.caption}
+        {image.note && <span className="figure__note">{image.note}</span>}
+      </figcaption>
+    )}
   </figure>
 );
 
@@ -88,7 +93,7 @@ export default function Gallery({ sections }) {
       return (
         <section className="gallery" key={si}>
           <SectionHead section={section} />
-          <div className={`gallery__grid gallery__grid--${section.columns}`}>
+          <div className={`gallery__grid gallery__grid--${section.columns} ${section.bleed ? 'gallery__grid--bleed' : ''}`}>
             {section.images.map((image, i) => (
               <div className="gallery__cell" key={image.src}>
                 <Figure image={image} delay={i * 0.12} sizes={`(min-width: 900px) ${Math.round(100 / section.columns)}vw, 100vw`} />

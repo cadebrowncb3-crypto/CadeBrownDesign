@@ -87,14 +87,25 @@ export const projects = [
     ),
     sections: [
       {
-        type: 'feature',
+        type: 'grid',
         label: 'Identity',
-        image: img(
-          '/images/momentum3/marks.png',
-          1838,
-          962,
-          'Momentum3 marks: primary lockup (pixel-arrow mark over the MOMENTUM³ wordmark, black on yellow) for the default lockup; secondary stacked “MOME / NTUM³” wordmark in white on black for wide formats, signage and apparel strips; tertiary single-line wordmark in black on off-white for apparel tags.'
-        )
+        title: 'Marks',
+        columns: 3,
+        bleed: true,
+        images: [
+          img('/images/momentum3/mark-primary.jpg', 1989, 1015, 'Momentum3 primary mark: pixel-arrow symbol above the MOMENTUM³ wordmark, charcoal on yellow.', {
+            caption: 'Primary',
+            note: 'Default lockup'
+          }),
+          img('/images/momentum3/mark-secondary.jpg', 1988, 1015, 'Momentum3 secondary mark: stacked “MOME / NTUM³” wordmark in off-white on charcoal.', {
+            caption: 'Secondary',
+            note: 'Wide formats, signage, apparel strips'
+          }),
+          img('/images/momentum3/mark-tertiary.jpg', 1927, 982, 'Momentum3 tertiary mark: single-line MOMENTUM³ wordmark in charcoal on white.', {
+            caption: 'Tertiary',
+            note: 'Apparel tags'
+          })
+        ]
       },
       {
         type: 'feature',
