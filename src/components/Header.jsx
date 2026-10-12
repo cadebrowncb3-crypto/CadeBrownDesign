@@ -30,7 +30,7 @@ export default function Header() {
       const mm = gsap.matchMedia();
       mm.add(FULL_MOTION, () => {
         gsap.from('.topbar > *', { yPercent: -120, opacity: 0, duration: 0.9, ease: 'power4.out', stagger: 0.06 });
-        gsap.from('.navbox', { y: 40, opacity: 0, duration: 1, ease: 'power4.out', delay: 0.2 });
+        gsap.from('.navbox', { y: -30, opacity: 0, duration: 1, ease: 'power4.out', delay: 0.2 });
       });
     },
     { scope: ref, dependencies: [ready] }

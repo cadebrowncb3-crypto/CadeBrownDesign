@@ -274,7 +274,7 @@ em {
   right: 0;
   z-index: 60;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: baseline;
   gap: var(--g);
   padding: 18px var(--pad);
@@ -310,14 +310,15 @@ em {
 }
 
 .navbox {
+  /* Top-right: the bottom corners are where hosting badges/preview toolbars sit. */
   position: fixed;
   right: var(--pad);
-  bottom: var(--pad);
+  top: 10px;
   z-index: 70;
   background: var(--ink);
   color: var(--on-black);
   border-radius: 6px;
-  padding: 10px;
+  padding: 5px;
   border: 1px solid rgba(237, 238, 229, 0.22); /* keeps the box visible on black sections */
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
 }
@@ -327,17 +328,16 @@ em {
 }
 
 .navbox__list {
-  display: grid;
-  justify-items: end;
+  display: flex;
   gap: 2px;
 }
 
 .navbox__list a {
   display: inline-block;
-  padding: 3px 8px;
+  padding: 5px 10px;
   border-radius: 3px;
   font-weight: 500;
-  font-size: clamp(1.1rem, 1.5vw, 1.45rem);
+  font-size: 1rem;
   line-height: 1.15;
   text-decoration: none;
   transition:
@@ -362,7 +362,6 @@ em {
   flex-wrap: wrap;
   gap: 8px clamp(14px, 2vw, 32px);
   padding: 18px var(--pad) 22px;
-  padding-right: max(var(--pad), 200px);
   border-top: 1px solid var(--line);
   font-size: 0.74rem;
   font-weight: 500;
@@ -531,8 +530,8 @@ em {
   text-transform: uppercase;
   letter-spacing: -0.045em;
   line-height: 0.8;
-  /* "CADE BROWN" measures ~6.53em in Archivo 800; keep it clear of the menu box. */
-  font-size: min(calc((100vw - 2 * var(--pad) - 190px) / 6.6), 24rem);
+  /* "CADE BROWN" measures ~6.53em in Archivo 800 */
+  font-size: min(calc((100vw - 2 * var(--pad)) / 6.6), 24rem);
   white-space: nowrap;
   margin-left: -0.04em;
 }
@@ -1528,8 +1527,8 @@ em {
     display: grid;
     place-items: center;
     margin-left: auto;
-    width: 52px;
-    height: 52px;
+    width: 44px;
+    height: 44px;
     border: 1px solid rgba(237, 238, 229, 0.22);
     border-radius: 6px;
     background: var(--ink);
@@ -1553,7 +1552,9 @@ em {
     display: none;
     position: absolute;
     right: 0;
-    bottom: calc(100% + 8px);
+    top: calc(100% + 8px);
+    flex-direction: column;
+    align-items: flex-end;
     min-width: 168px;
     padding: 10px;
     background: var(--ink);
@@ -1597,7 +1598,7 @@ em {
 
   .hero__aside {
     grid-row: 3;
-    padding: 0 68px 4px 0;
+    padding: 0 0 4px;
     gap: 12px;
   }
 
@@ -1721,7 +1722,6 @@ em {
 
   .microfoot {
     padding-right: var(--pad);
-    padding-bottom: 92px;
   }
 
   .microfoot__end {
