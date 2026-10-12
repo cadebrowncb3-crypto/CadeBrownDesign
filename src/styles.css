@@ -3,6 +3,7 @@
   --fg: #141414;
   --muted: #6b6760;
   --line: #d9d4cb;
+  --hero-fg: #f6efe6;
   --serif: "Instrument Serif", Georgia, serif;
   --sans: "Inter", system-ui, sans-serif;
   --gutter: clamp(16px, 4vw, 48px);
@@ -18,8 +19,6 @@
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-
-html { scroll-behavior: smooth; }
 
 body {
   background: var(--bg);
@@ -41,8 +40,15 @@ a { color: inherit; text-decoration: none; }
   align-items: center;
   padding: 20px var(--gutter);
   z-index: 10;
-  mix-blend-mode: difference;
-  color: #fff;
+  color: var(--hero-fg);
+  transition: background-color 0.3s, color 0.3s;
+}
+/* Toggled once the hero has scrolled out from under the header. */
+.site-header.is-solid {
+  color: var(--fg);
+  background: color-mix(in srgb, var(--bg) 85%, transparent);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 .logo { font-family: var(--serif); font-size: 1.6rem; }
 .site-header nav { display: flex; gap: 24px; font-size: 0.9rem; }
@@ -55,8 +61,21 @@ a { color: inherit; text-decoration: none; }
   justify-content: center;
   padding: 0 var(--gutter);
   position: relative;
+  overflow: hidden;
+  color: var(--hero-fg);
+  background: #1c1510; /* shown until / if WebGL is unavailable */
 }
-.eyebrow { color: var(--muted); font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; }
+.hero-bg { position: absolute; inset: 0; }
+/* Darken the bottom-left so text stays readable over the light end of the gradient. */
+.hero-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(20deg, rgb(10 8 6 / 0.55), rgb(10 8 6 / 0) 65%);
+  pointer-events: none;
+}
+.hero-content { position: relative; pointer-events: none; }
+.eyebrow { opacity: 0.75; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; }
 .hero-title {
   font-family: var(--serif);
   font-weight: 400;
@@ -64,9 +83,9 @@ a { color: inherit; text-decoration: none; }
   line-height: 0.95;
   margin: 16px 0 24px;
 }
-.hero-title .line { display: block; overflow: hidden; padding-bottom: 0.22em; margin-bottom: -0.22em; }
-.hero-word { display: inline-block; }
-.hero-sub { max-width: 32ch; font-size: 1.15rem; color: var(--muted); }
+/* SplitText masks its text with overflow: hidden; leave room for descenders. */
+.hero-title .split-parent { padding-bottom: 0.22em; margin-bottom: -0.22em; }
+.hero-sub { max-width: 32ch; font-size: 1.15rem; opacity: 0.8; }
 .scroll-cue {
   position: absolute;
   bottom: 32px;
@@ -74,7 +93,7 @@ a { color: inherit; text-decoration: none; }
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--muted);
+  opacity: 0.75;
 }
 
 /* Sections */
@@ -83,8 +102,10 @@ section:not(.hero):not(.marquee) { padding: 120px var(--gutter); }
   font-family: var(--serif);
   font-weight: 400;
   font-size: clamp(2.2rem, 6vw, 4.5rem);
+  line-height: 1.1;
   margin-bottom: 48px;
 }
+.blur-text-segment { display: inline-block; will-change: transform, filter, opacity; }
 
 /* Work grid */
 .grid {
@@ -92,17 +113,11 @@ section:not(.hero):not(.marquee) { padding: 120px var(--gutter); }
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr));
   gap: 48px 32px;
 }
+.card-media .tilted-card-figure { aspect-ratio: 4 / 3; }
+.card-media .tilted-card-inner { width: 100%; }
+.card-media .tilted-card-img { border-radius: 6px; }
 .card h3 { font-size: 1.1rem; font-weight: 500; margin-top: 16px; }
 .card p { color: var(--muted); font-size: 0.9rem; }
-.thumb {
-  aspect-ratio: 4 / 3;
-  border-radius: 4px;
-  background: linear-gradient(135deg, hsl(var(--hue) 55% 62%), hsl(calc(var(--hue) + 40) 45% 35%));
-  overflow: hidden;
-  transition: transform 0.5s cubic-bezier(.2,.7,.2,1);
-}
-.card:hover .thumb { transform: scale(0.98); }
-.card img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 /* Marquee */
 .marquee {
@@ -122,6 +137,7 @@ section:not(.hero):not(.marquee) { padding: 120px var(--gutter); }
 
 /* Contact */
 .contact-link {
+  display: inline-block;
   font-family: var(--serif);
   font-size: clamp(2rem, 7vw, 5.5rem);
   border-bottom: 1px solid var(--line);
