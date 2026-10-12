@@ -1,11 +1,6 @@
 // Site-wide content. Every value here is taken from the source PDF
 // (Cade_Brown_Portfolio.pdf). Anything the PDF does not provide is listed in
-// `missing` and surfaced on the site through <ContentNote />.
-
-// Set to false once the missing information below has been supplied (or you
-// decide to publish without it). While true, dashed "content needed" notes are
-// shown on the pages where information is missing.
-export const SHOW_CONTENT_NOTES = false;
+// `missing` (and in CONTENT_NOTES.md); it is not shown on the site.
 
 export const site = {
   name: 'Cade Brown',
@@ -28,6 +23,8 @@ export const about = {
   // Verbatim from slide 3 of the PDF.
   intro:
     'I’m a designer who builds stories you can feel, cinematic, structured, and a little unruly in all the right ways.',
+  // Closing line of the bio, used for the home page statement.
+  closing: 'My work is intentional, expressive, and built to make people stop, look, and feel.',
   bio: 'I’m a designer who builds stories you can feel, cinematic, structured, and a little unruly in all the right ways. I move between editorial systems, branding, and layout with a hands on, research‑driven process that treats every project like a world to be shaped. I’m obsessed with clarity, tension, and personality: type that misbehaves on purpose, visuals that carry weight, and narratives that actually say something. My work is intentional, expressive, and built to make people stop, look, and feel.',
   // Named in the bio above.
   disciplines: ['Editorial systems', 'Branding', 'Layout'],

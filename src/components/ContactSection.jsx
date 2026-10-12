@@ -2,10 +2,9 @@ import { useRef } from 'react';
 import { gsap, useGSAP, FULL_MOTION } from '../lib/gsap';
 import SplitText from './reactbits/SplitText';
 import Magnet from './reactbits/Magnet';
-import ContentNote from './ContentNote';
-import { site, contactMissing, SHOW_CONTENT_NOTES } from '../data/site';
+import { site } from '../data/site';
 
-/** Slide 15, "Get in touch", rebuilt as a section that closes every page. */
+/** "Let's talk" — closes every page. Black panel, yellow accent. */
 export default function ContactSection() {
   const ref = useRef(null);
 
@@ -13,20 +12,13 @@ export default function ContactSection() {
     () => {
       const mm = gsap.matchMedia();
       mm.add(FULL_MOTION, () => {
-        gsap.from('.contact__rule', {
-          scaleX: 0,
-          transformOrigin: 'left center',
-          duration: 1.4,
-          ease: 'power4.inOut',
-          scrollTrigger: { trigger: ref.current, start: 'top 75%', once: true }
-        });
-        gsap.from('.contact__details > *', {
-          y: 30,
+        gsap.from('.contact__row', {
+          y: 40,
           opacity: 0,
           duration: 1,
           ease: 'power4.out',
           stagger: 0.08,
-          scrollTrigger: { trigger: '.contact__details', start: 'top 85%', once: true }
+          scrollTrigger: { trigger: '.contact__rows', start: 'top 85%', once: true }
         });
       });
     },
@@ -35,48 +27,49 @@ export default function ContactSection() {
 
   return (
     <section ref={ref} id="contact" className="contact" aria-labelledby="contact-title">
-      <h2 id="contact-title" className="contact__title" aria-label="Get in touch">
+      <p className="label contact__eyebrow">(Contact)</p>
+      <h2 id="contact-title" className="contact__title" aria-label="Let's talk">
         <SplitText
-          text="Get in touch"
+          text="Let’s talk"
           tag="span"
           splitType="chars"
           textAlign="left"
-          delay={35}
+          delay={40}
           duration={1.1}
           ease="power4.out"
           from={{ yPercent: 110 }}
           to={{ yPercent: 0 }}
-          threshold={0.2}
+          threshold={0.15}
           rootMargin="0px"
-          className="contact__split"
         />
       </h2>
-      <div className="contact__rule" aria-hidden="true" />
+
       <div className="contact__grid">
-        <div className="contact__cell" aria-hidden="true" />
-        <div className="contact__cell contact__details">
-          <Magnet padding={80} magnetStrength={4} maxOffset={18} wrapperClassName="contact__magnet">
-            <a className="pill pill--large" href={`mailto:${site.email}`}>
-              Contact
-            </a>
-          </Magnet>
-          <a className="contact__line" href={`mailto:${site.email}`}>
-            {site.email}
+        <Magnet padding={90} magnetStrength={3.5} maxOffset={22} wrapperClassName="contact__magnet">
+          <a className="contact__cta" href={`mailto:${site.email}`}>
+            Write to me <span aria-hidden="true">↗</span>
           </a>
-          <a className="contact__line" href={site.phoneHref}>
-            {site.phoneDisplay}
-          </a>
-          <span className="contact__line">{site.handle}</span>
-        </div>
-        {SHOW_CONTENT_NOTES ? (
-          <div className="contact__cell contact__cell--note">
-            <ContentNote items={contactMissing} />
+        </Magnet>
+
+        <dl className="contact__rows">
+          <div className="contact__row">
+            <dt className="label">Email</dt>
+            <dd>
+              <a href={`mailto:${site.email}`}>{site.email}</a>
+            </dd>
           </div>
-        ) : (
-          <div className="contact__cell" aria-hidden="true" />
-        )}
+          <div className="contact__row">
+            <dt className="label">Phone</dt>
+            <dd>
+              <a href={site.phoneHref}>{site.phoneDisplay}</a>
+            </dd>
+          </div>
+          <div className="contact__row">
+            <dt className="label">Social</dt>
+            <dd>{site.handle}</dd>
+          </div>
+        </dl>
       </div>
-      <div className="contact__bar" aria-hidden="true" />
     </section>
   );
 }

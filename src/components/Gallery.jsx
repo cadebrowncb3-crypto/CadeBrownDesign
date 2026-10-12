@@ -10,11 +10,11 @@ const Figure = ({ image, delay, sizes, className = '' }) => (
 const SectionHead = ({ section }) =>
   section.title ? (
     <header className="story__head">
-      {section.label && <p className="eyebrow">{section.label}</p>}
+      {section.label && <p className="label">{section.label}</p>}
       <h2 className="story__title">{section.title}</h2>
     </header>
   ) : (
-    section.label && <h2 className="eyebrow">{section.label}</h2>
+    section.label && <h2 className="label">{section.label}</h2>
   );
 
 /** Text parts of a "story" section: paragraphs, cards, steps, numbered points, tags. */

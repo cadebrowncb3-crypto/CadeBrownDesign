@@ -46,7 +46,8 @@ export default function RevealImage({
           { scale: 1, yPercent: 0, duration: 1.8, ease: 'power3.out', delay, scrollTrigger: st }
         );
 
-        if (parallax) {
+        // Parallax only on wider screens: on phones it would push images onto their captions.
+        if (parallax && window.matchMedia('(min-width: 900px)').matches) {
           // Moves the whole frame (never crops the artwork inside it).
           gsap.fromTo(
             frame,

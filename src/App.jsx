@@ -3,6 +3,9 @@ import { BrowserRouter, Route, Routes, useLocation, useParams } from 'react-rout
 import { SmoothScrollProvider, useSmoothScroll } from './lib/SmoothScroll';
 import { ScrollTrigger } from './lib/gsap';
 import { LightboxProvider } from './components/Lightbox';
+import { IntroProvider } from './lib/Intro';
+import Preloader from './components/Preloader';
+import PageWipe from './components/PageWipe';
 import Header from './components/Header';
 import Home from './pages/Home';
 import Project from './pages/Project';
@@ -55,11 +58,14 @@ export default function App() {
   return (
     <BrowserRouter>
       <SmoothScrollProvider>
+        <IntroProvider>
         <LightboxProvider>
           <a className="skip-link" href="#main">
             Skip to content
           </a>
           <RouteEffects />
+          <Preloader />
+          <PageWipe />
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />
@@ -68,6 +74,7 @@ export default function App() {
             <Route path="*" element={<NotFound />} />
           </Routes>
         </LightboxProvider>
+        </IntroProvider>
       </SmoothScrollProvider>
     </BrowserRouter>
   );

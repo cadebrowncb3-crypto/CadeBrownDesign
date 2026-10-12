@@ -1,57 +1,40 @@
-/** The info table from the project slides: thick slate bars between label/value rows. */
+/**
+ * Project facts as small labelled columns (AUGE services-column pattern).
+ * Long-form role text is rendered separately by the page as the lede.
+ */
 export default function ProjectInfo({ project }) {
-  const rows = [];
-  // Projects may define their own rows: { label, text } or { label, list }.
-  project.info?.forEach((r) =>
-    rows.push({
-      label: r.label,
-      value: r.list ? (
-        <ul className="info__tools">
-          {r.list.map((t) => (
-            <li key={t}>{t}</li>
-          ))}
-        </ul>
-      ) : (
-        <p className={r.large ? 'info__focus' : 'info__role'}>{r.text}</p>
-      )
-    })
-  );
-  if (project.kind && project.focus) rows.push({ label: project.kind, value: <p className="info__focus">{project.focus}</p> });
-  if (project.role) rows.push({ label: 'Role', value: <p className="info__role">{project.role}</p> });
-  if (project.tools)
-    rows.push({
-      label: 'Skills / Tools',
-      value: (
-        <ul className="info__tools">
-          {project.tools.map((t) => (
-            <li key={t}>{t}</li>
-          ))}
-        </ul>
-      )
-    });
-  if (project.palette)
-    rows.push({
-      label: 'Palette',
-      value: (
-        <ul className="info__palette" aria-label="Brand palette as shown in the PDF">
-          {project.palette.map((c) => (
-            <li key={c} style={{ background: c }}>
-              <span>{c.toUpperCase()}</span>
-            </li>
-          ))}
-        </ul>
-      )
-    });
+  const cols = [];
+  project.info?.forEach((r) => cols.push({ label: r.label, value: r.list ? r.list : [r.text] }));
+  if (project.kind) cols.push({ label: 'Type', value: [project.kind] });
+  if (project.focus) cols.push({ label: 'Focus', value: [project.focus] });
+  if (project.tools) cols.push({ label: 'Skills / Tools', value: project.tools });
+  if (!cols.length && !project.palette) return null;
 
-  if (!rows.length) return null;
   return (
-    <dl className="info">
-      {rows.map((r) => (
-        <div className="info__row" key={r.label}>
-          <dt>{r.label}</dt>
-          <dd>{r.value}</dd>
+    <dl className="meta">
+      {cols.map((c) => (
+        <div className="meta__col" key={c.label}>
+          <dt className="label">{c.label}</dt>
+          {c.value.map((v) => (
+            <dd key={v}>{v}</dd>
+          ))}
         </div>
       ))}
+      {project.palette && (
+        <div className="meta__col">
+          <dt className="label">Palette</dt>
+          <dd>
+            <ul className="meta__palette" aria-label="Brand palette as shown in the PDF">
+              {project.palette.map((c) => (
+                <li key={c}>
+                  <span style={{ background: c }} />
+                  {c.toUpperCase()}
+                </li>
+              ))}
+            </ul>
+          </dd>
+        </div>
+      )}
     </dl>
   );
 }

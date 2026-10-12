@@ -1,15 +1,13 @@
 import { site } from '../data/site';
 
-/** The running footer from every slide of the PDF: name · email · section · Design Portfolio. */
+/** Micro footer line (AUGE-style): © · contact · section. */
 export default function Footer({ section }) {
   return (
-    <footer className="site-footer">
-      <span>{site.name}</span>
+    <footer className="microfoot">
+      <span>© {new Date().getFullYear()} {site.name}</span>
       <a href={`mailto:${site.email}`}>{site.email}</a>
-      <span className="site-footer__end">
-        {section && <span className="site-footer__section">{section}</span>}
-        <span>{site.tagline}</span>
-      </span>
+      <a href={site.phoneHref}>{site.phoneDisplay}</a>
+      <span className="microfoot__end">{section ? `${section} — ${site.tagline}` : site.tagline}</span>
     </footer>
   );
 }

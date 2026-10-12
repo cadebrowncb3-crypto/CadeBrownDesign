@@ -1,0 +1,16 @@
+/* React Bits — ScrollVelocity base styles (typography set in global.css) */
+.parallax {
+  position: relative;
+  overflow: hidden;
+}
+
+.scroller {
+  display: flex;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.scroller span {
+  flex-shrink: 0;
+}
+
