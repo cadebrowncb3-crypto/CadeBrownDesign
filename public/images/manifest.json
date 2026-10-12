@@ -1,0 +1,182 @@
+{
+ "images/cover/portfolio-cover-graphic.webp": {
+  "w": 4096,
+  "h": 2092,
+  "kb": 104
+ },
+ "images/about/cade-brown.jpg": {
+  "w": 1440,
+  "h": 1080,
+  "kb": 132
+ },
+ "images/cold-blooded/cover-mockup.jpg": {
+  "w": 512,
+  "h": 342,
+  "kb": 13
+ },
+ "images/cold-blooded/spreads-overview.jpg": {
+  "w": 3000,
+  "h": 2250,
+  "kb": 678
+ },
+ "images/cold-blooded/front-cover.webp": {
+  "w": 165,
+  "h": 292,
+  "kb": 21
+ },
+ "images/cold-blooded/spread-01.webp": {
+  "w": 303,
+  "h": 292,
+  "kb": 27
+ },
+ "images/cold-blooded/spread-02.webp": {
+  "w": 303,
+  "h": 292,
+  "kb": 24
+ },
+ "images/cold-blooded/spread-03.webp": {
+  "w": 303,
+  "h": 292,
+  "kb": 33
+ },
+ "images/cold-blooded/spread-04.webp": {
+  "w": 303,
+  "h": 292,
+  "kb": 31
+ },
+ "images/cold-blooded/spread-05.webp": {
+  "w": 303,
+  "h": 292,
+  "kb": 28
+ },
+ "images/cold-blooded/spread-06.webp": {
+  "w": 303,
+  "h": 292,
+  "kb": 40
+ },
+ "images/cold-blooded/spread-07.webp": {
+  "w": 303,
+  "h": 292,
+  "kb": 31
+ },
+ "images/cold-blooded/spread-08.webp": {
+  "w": 303,
+  "h": 292,
+  "kb": 32
+ },
+ "images/cold-blooded/spread-09.webp": {
+  "w": 303,
+  "h": 292,
+  "kb": 29
+ },
+ "images/cold-blooded/spread-10.webp": {
+  "w": 303,
+  "h": 292,
+  "kb": 34
+ },
+ "images/cold-blooded/spread-11.webp": {
+  "w": 303,
+  "h": 292,
+  "kb": 31
+ },
+ "images/cold-blooded/spread-12.webp": {
+  "w": 303,
+  "h": 292,
+  "kb": 26
+ },
+ "images/cold-blooded/spread-13.webp": {
+  "w": 303,
+  "h": 292,
+  "kb": 34
+ },
+ "images/cold-blooded/spread-14.webp": {
+  "w": 303,
+  "h": 292,
+  "kb": 34
+ },
+ "images/cold-blooded/spread-15.webp": {
+  "w": 303,
+  "h": 292,
+  "kb": 32
+ },
+ "images/cold-blooded/spread-16.webp": {
+  "w": 303,
+  "h": 292,
+  "kb": 23
+ },
+ "images/cold-blooded/back-cover.webp": {
+  "w": 165,
+  "h": 292,
+  "kb": 8
+ },
+ "images/momentum3/athlete-wetsuit.jpg": {
+  "w": 2112,
+  "h": 1104,
+  "kb": 227
+ },
+ "images/momentum3/event-arch.jpg": {
+  "w": 2116,
+  "h": 1322,
+  "kb": 364
+ },
+ "images/momentum3/beanie.webp": {
+  "w": 336,
+  "h": 448,
+  "kb": 41
+ },
+ "images/momentum3/beanie-and-cap.jpg": {
+  "w": 1373,
+  "h": 863,
+  "kb": 100
+ },
+ "images/momentum3/hoodie.jpg": {
+  "w": 384,
+  "h": 416,
+  "kb": 16
+ },
+ "images/posters/poster-geometric-collage.jpg": {
+  "w": 368,
+  "h": 424,
+  "kb": 24
+ },
+ "images/posters/poster-orange-collage.jpg": {
+  "w": 344,
+  "h": 436,
+  "kb": 21
+ },
+ "images/posters/poster-vivo-rio.jpg": {
+  "w": 344,
+  "h": 456,
+  "kb": 18
+ },
+ "images/posters/poster-warrior-aesthetic.jpg": {
+  "w": 1232,
+  "h": 1712,
+  "kb": 128
+ },
+ "images/posters/poster-every-moment-counts.jpg": {
+  "w": 2731,
+  "h": 4096,
+  "kb": 1514
+ },
+ "images/experience/gala-program.jpg": {
+  "w": 1376,
+  "h": 1824,
+  "kb": 315
+ },
+ "images/experience/harbert-tee.jpg": {
+  "w": 1280,
+  "h": 1920,
+  "kb": 87
+ },
+ "images/experience/harbert-magazine.jpg": {
+  "w": 1328,
+  "h": 1648,
+  "kb": 105
+ },
+ "images/experience/harbert-tee-cap.jpg": {
+  "w": 1376,
+  "h": 1824,
+  "kb": 94
+ }
+}
