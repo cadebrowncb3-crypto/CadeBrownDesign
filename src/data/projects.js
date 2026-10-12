@@ -181,31 +181,7 @@ export const projects = [
       },
       {
         type: 'story',
-        label: '02 / Research',
-        title: 'Inspiration and references',
-        cards: [
-          { title: 'David Carson — Collage', text: 'Torn edges and scraps layered into one irregular shape.' },
-          { title: 'Rad Future — Analog collage', text: 'Found paper, pattern tape and book text stacked in layers.' },
-          { title: 'David Carson — Nucollage', text: 'A torn color shape cut through by bold, overlapping type.' }
-        ]
-      },
-      {
-        type: 'story',
-        label: '03 / Early experiments',
-        title: 'Music into marks',
-        body: [
-          'We began by listening to music and making marks in response to what we heard.',
-          'I kept those studies and reused them as elements across the collages, so the music is physically present in the final pieces.'
-        ],
-        images: [
-          img('/images/nothing-but-time/mark-making.jpg', 666, 882, 'Collage study on blue: torn black, white and patterned paper over printed text.', {
-            caption: 'Mark making exercise'
-          })
-        ]
-      },
-      {
-        type: 'story',
-        label: '04 / Making',
+        label: '02 / Making',
         title: 'From paper to print',
         steps: [
           { title: 'Gather', text: 'Found imagery plus images and type I made.' },
@@ -217,7 +193,7 @@ export const projects = [
       },
       {
         type: 'grid',
-        label: '05 / Making',
+        label: '03 / Making',
         title: 'The physical pieces, documented',
         columns: 3,
         images: [
@@ -234,75 +210,7 @@ export const projects = [
       },
       {
         type: 'story',
-        label: '06 / Collage language',
-        title: 'Rough edges, layers, texture',
-        layout: 'cover',
-        cards: [
-          { title: 'Halftone', text: 'Dots give torn shapes a printed texture.' },
-          { title: 'Layered paper', text: 'Notebook sheets and scraps stack under the type.' },
-          { title: 'Hand marks', text: 'Gestural scribbles add rhythm.' }
-        ],
-        images: [
-          img('/images/nothing-but-time/front-cover.jpg', 1500, 1500, 'Nothing But Time front cover: orange collage with a cut-out eye, halftone shapes, notebook paper and torn red letters.', {
-            caption: 'Front cover'
-          }),
-          img('/images/nothing-but-time/detail-halftone.jpg', 650, 750, 'Detail of a torn halftone dot shape on orange.', { caption: 'Halftone' }),
-          img('/images/nothing-but-time/detail-layered-paper.jpg', 800, 550, 'Detail of layered notebook paper and scraps under typed text.', {
-            caption: 'Layered paper'
-          }),
-          img('/images/nothing-but-time/detail-hand-marks.jpg', 400, 250, 'Detail of hand-drawn scribbled X marks.', {
-            caption: 'Hand marks'
-          })
-        ]
-      },
-      {
-        type: 'grid',
-        label: '07 / Motifs',
-        title: 'The eye crosses both sides',
-        columns: 2,
-        images: [
-          img('/images/nothing-but-time/motif-eye-front.jpg', 700, 330, 'Cut-out eye on the orange front cover.', { caption: 'Front: orange' }),
-          img('/images/nothing-but-time/motif-eye-back.jpg', 540, 330, 'Cut-out eye on the blue back cover.', { caption: 'Back: blue' })
-        ],
-        body: [
-          'A recurring cut-out eye ties the two sides together, alongside furniture-like forms that appear on both covers.'
-        ]
-      },
-      {
-        type: 'story',
-        label: '08 / Typography',
-        title: 'IBM Plex Mono',
-        body: [
-          'A monospaced face reads like a typewriter or a receipt.',
-          'Used for tracklist, credits, lyrics and titles across every piece.'
-        ],
-        images: [
-          img('/images/nothing-but-time/type-detail-back.webp', 441, 553, 'Crumpled receipt-style tracklist on the back cover: Side A and Side B songs, record label, barcode, catalog number and credits.', {
-            caption: 'Back cover tracklist'
-          }),
-          img('/images/nothing-but-time/type-detail-insert.webp', 717, 236, 'Insert detail: song title, release year, original project, producers and the start of the lyrics.', {
-            caption: 'Insert'
-          })
-        ]
-      },
-      {
-        type: 'story',
-        label: '09 / Extending the system',
-        title: 'Labels cropped from the covers',
-        cards: [
-          { title: 'Crop as design', text: 'Each label is a close crop of its cover, so the record plays as a fragment of the sleeve.' }
-        ],
-        body: ['Side B repeats the move with the back cover.'],
-        images: [
-          img('/images/nothing-but-time/front-cover.jpg', 1500, 1500, 'Nothing But Time front cover.', { caption: 'Front cover' }),
-          img('/images/nothing-but-time/label-side-a.jpg', 760, 760, 'Side A record label: a close crop of the orange front cover with catalog number NBT-2026-001 and “Side A 45RPM Stereo”.', {
-            caption: 'Side A label'
-          })
-        ]
-      },
-      {
-        type: 'story',
-        label: '10 / Extending the system',
+        label: '04 / Extending the system',
         title: 'Two sides, one record',
         cards: [
           { title: 'Label details', text: 'Catalog number, side and speed are set in the same mono type as the booklet.' }
@@ -316,7 +224,7 @@ export const projects = [
       },
       {
         type: 'story',
-        label: '11 / Booklet insert',
+        label: '05 / Booklet insert',
         title: 'The insert keeps the same voice',
         body: [
           'Printed type and images, collaged in the same torn, layered style.',
@@ -326,39 +234,6 @@ export const projects = [
           img('/images/nothing-but-time/insert-spread.webp', 2000, 1429, 'The open booklet insert: lyrics and credits in monospaced type beside torn collage strips.', {
             caption: 'Insert spread'
           })
-        ]
-      },
-      {
-        type: 'grid',
-        label: '12 / Outcome',
-        title: 'Front and back, with records',
-        columns: 2,
-        images: [
-          img('/images/nothing-but-time/outcome-front-side-a.jpg', 2000, 1480, 'Orange front sleeve with the green Side A record sliding out to the right.', {
-            caption: 'Front sleeve + Side A'
-          }),
-          img('/images/nothing-but-time/outcome-back-side-b.jpg', 2000, 1489, 'Blue back sleeve with the green Side B record sliding out to the left.', {
-            caption: 'Back sleeve + Side B'
-          })
-        ]
-      },
-      {
-        type: 'story',
-        label: '13 / Reflection',
-        title: 'What the process taught me',
-        points: [
-          {
-            title: 'Make by hand first',
-            text: 'Photoshop only refined color and shadow, so the final pieces stay tactile.'
-          },
-          {
-            title: 'Constraints build consistency',
-            text: 'One typeface, one collage method and one color logic held four formats together.'
-          },
-          {
-            title: 'Let the music leave marks',
-            text: 'Reusing the listening studies gave the images a rhythm the cleaner pieces lack.'
-          }
         ]
       }
     ],
