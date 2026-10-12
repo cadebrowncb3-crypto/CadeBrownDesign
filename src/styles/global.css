@@ -1088,6 +1088,12 @@ em {
   align-self: center;
 }
 
+/* Cut-out figures that end at the photo's bottom edge sit on the tile's edge. */
+.gallery__cell--flush {
+  align-items: flex-end;
+  padding-bottom: 0;
+}
+
 .figure__note {
   display: block;
   margin-top: 4px;

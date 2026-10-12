@@ -95,7 +95,7 @@ export default function Gallery({ sections }) {
           <SectionHead section={section} />
           <div className={`gallery__grid gallery__grid--${section.columns} ${section.bleed ? 'gallery__grid--bleed' : ''}`}>
             {section.images.map((image, i) => (
-              <div className="gallery__cell" key={image.src}>
+              <div className={`gallery__cell ${image.flushBottom ? 'gallery__cell--flush' : ''}`} key={image.src}>
                 <Figure image={image} delay={i * 0.12} sizes={`(min-width: 900px) ${Math.round(100 / section.columns)}vw, 100vw`} />
               </div>
             ))}

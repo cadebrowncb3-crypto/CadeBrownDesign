@@ -52,10 +52,10 @@ These product shots had their plain studio backdrop removed with
 `tools/remove_backgrounds.py` (BiRefNet cut-out + the cast shadow rebuilt as a
 soft transparent shadow): Momentum³ beanie, cap, lanyard/badge, both Instagram
 phones, sticker sheet; Nothing But Time package, front, back and insert spread;
-Cold Blooded cover mockup; Harbert Magazine. The originals are kept, unchanged,
+Cold Blooded cover mockup; Harbert Magazine; the two Harbert T-shirt photos
+(shown anchored to the bottom of their tiles, since the models are cropped there). The originals are kept, unchanged,
 in `source-images/original-backgrounds/` (not deployed).
 
-Left with their backgrounds on purpose: photos of people (beanie/cap/hoodie
-models, Harbert tees — they are cropped at the frame edge), scenes (arch, tower,
+Left with their backgrounds on purpose: the beanie/cap/hoodie model photos, scenes (arch, tower,
 surfer, Cold Blooded flat-lay), the three logo marks, and the Gala program (its
 navy fabric texture can't be separated cleanly from the shadow).

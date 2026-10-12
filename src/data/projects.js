@@ -286,10 +286,11 @@ export const projects = [
         columns: 3,
         images: [
           img(
-            '/images/experience/harbert-tee.jpg',
+            '/images/experience/harbert-tee.webp',
             1280,
             1920,
-            'Back of a navy T-shirt with an orange Harbert Graduate Business Programs crest featuring an eagle and campus buildings.'
+            'Back of a navy T-shirt with an orange Harbert Graduate Business Programs crest featuring an eagle and campus buildings.',
+            { flushBottom: true }
           ),
           img(
             '/images/experience/harbert-magazine.webp',
@@ -298,10 +299,11 @@ export const projects = [
             'Harbert Magazine, Fall 2025 cover: “A Prepared Mind” spelled in Scrabble tiles on a wooden table.'
           ),
           img(
-            '/images/experience/harbert-tee-cap.jpg',
+            '/images/experience/harbert-tee-cap.webp',
             1376,
             1824,
-            'Navy T-shirt with an expressive orange Harbert Graduate Business Programs eagle illustration, worn with a backwards cap.'
+            'Navy T-shirt with an expressive orange Harbert Graduate Business Programs eagle illustration, worn with a backwards cap.',
+            { flushBottom: true }
           )
         ]
       }
