@@ -29,7 +29,9 @@ Netlify (**Add new site → Import an existing project**) or run
   [React Bits](https://github.com/DavidHDev/react-bits) (MIT + Commons Clause);
   each file notes its small adaptations
 - `src/lib/SmoothScroll.jsx` — Lenis ⇄ ScrollTrigger sync as documented in the Lenis README
-- `public/images/` — artwork extracted from the PDF (`tools/export_assets.py`)
+- `public/images/` — artwork extracted from the PDF (`tools/export_assets.py`) and
+  web-sized copies of supplied originals (`tools/web_images.py`)
+- `source-images/` — full-size originals you uploaded (kept in git, not deployed)
 
 ## Motion
 

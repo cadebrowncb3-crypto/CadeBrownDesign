@@ -31,3 +31,10 @@ Harbert Magazine (1280–1376 px wide).
 
 The Momentum3 event arch, beanie, cap, lanyard/credential and hoodie images were
 supplied separately (not from the PDF) at ~1500–2000 px and are used unchanged.
+
+The Momentum3 watersports tower, beanie/cap on-model, Instagram feed,
+Instagram countdown and sticker collection originals (full-size PNGs, ~25 MB
+total) live in `source-images/momentum3/` and are not deployed. The site uses
+WebP copies in `public/images/momentum3/` made by `tools/web_images.py`:
+uniform scale-down only (long edge ≤ 1800 px, tower kept at 1536 px), never
+cropped, so proportions match the originals. Re-run it if you replace an original.

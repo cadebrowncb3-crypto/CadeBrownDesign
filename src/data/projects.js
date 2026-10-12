@@ -95,14 +95,36 @@ export const projects = [
     )
       },
       {
+        type: 'feature',
+        label: 'Event',
+        image: img(
+          '/images/momentum3/watersports-tower.webp',
+          1536,
+          1024,
+          'Wooden judging tower in the surf wrapped in black and yellow Momentum3 banners, with jet skis below and green mountains behind.'
+        )
+      },
+      {
         type: 'grid',
-        label: 'Merchandise & event',
+        label: 'Apparel & merchandise',
         columns: 2,
         images: [
           img('/images/momentum3/beanie.webp', 1509, 2000, 'Black ribbed Momentum3 beanie with glitch-style yellow knit marks and a vertical yellow wordmark tag on the cuff.'),
+          img('/images/momentum3/beanie-model.webp', 1359, 1800, 'Model wearing the black and yellow Momentum3 beanie with a black hooded jacket.'),
           img('/images/momentum3/cap.webp', 1507, 2000, 'Black five-panel Momentum3 cap with yellow contrast stitching, embroidered pixel-arrow mark and MOMENTUM³ wordmark, brown leather strap.'),
-          img('/images/momentum3/lanyard-badge.webp', 2000, 1760, 'Yellow Momentum3 lanyard with distressed black wordmark print, holding a collage-style athlete credential listing name, country and stance.'),
-          img('/images/momentum3/hoodie.webp', 1494, 2000, 'White hoodie with black sleeve panels and a black-and-yellow Momentum3 graphic band across the chest reading “EST 2026”.')
+          img('/images/momentum3/cap-model.webp', 1362, 1800, 'Model wearing the black Momentum3 five-panel cap with the yellow embroidered logo and a black hooded jacket.'),
+          img('/images/momentum3/hoodie.webp', 1494, 2000, 'White hoodie with black sleeve panels and a black-and-yellow Momentum3 graphic band across the chest reading “EST 2026”.'),
+          img('/images/momentum3/lanyard-badge.webp', 2000, 1760, 'Yellow Momentum3 lanyard with distressed black wordmark print, holding a collage-style athlete credential listing name, country and stance.')
+        ]
+      },
+      {
+        type: 'grid',
+        label: 'Social & stickers',
+        columns: 3,
+        images: [
+          img('/images/momentum3/instagram-feed.webp', 1122, 1402, 'Phone showing the momentum³ Instagram feed with skateboarding and surfing posts captioned “Never idle”.'),
+          img('/images/momentum3/instagram-countdown.webp', 1440, 1800, 'Phone showing a momentum³ Instagram post: a black-and-white collage countdown reading “21 days until drop-in”.'),
+          img('/images/momentum3/sticker-collection.webp', 1254, 1254, 'Sticker sheet of black-and-white Momentum3 die-cut stickers: wordmarks, pixel-arrow marks and mountain shapes.')
         ]
       }
     ],
