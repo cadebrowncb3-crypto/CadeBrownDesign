@@ -45,3 +45,17 @@ smallest are the collage detail crops (hand marks 400 × 250, halftone 650 × 75
 layered paper 800 × 550), the eye motif crops (700 × 330, 540 × 330), the
 mark-making study (666 × 882) and the Side A label (760 × 760) — larger exports
 of these would let them display bigger.
+
+## Backgrounds removed (shadows kept)
+
+These product shots had their plain studio backdrop removed with
+`tools/remove_backgrounds.py` (BiRefNet cut-out + the cast shadow rebuilt as a
+soft transparent shadow): Momentum³ beanie, cap, lanyard/badge, both Instagram
+phones, sticker sheet; Nothing But Time package, front, back and insert spread;
+Cold Blooded cover mockup; Harbert Magazine. The originals are kept, unchanged,
+in `source-images/original-backgrounds/` (not deployed).
+
+Left with their backgrounds on purpose: photos of people (beanie/cap/hoodie
+models, Harbert tees — they are cropped at the frame edge), scenes (arch, tower,
+surfer, Cold Blooded flat-lay), the three logo marks, and the Gala program (its
+navy fabric texture can't be separated cleanly from the shadow).

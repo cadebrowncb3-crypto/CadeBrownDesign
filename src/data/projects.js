@@ -30,7 +30,7 @@ export const projects = [
       'Cold Blooded booklet spreads laid out at an angle, including the Kaillie Humphries feature and “04 The Legends” opener.'
     ),
     hero: img(
-      '/images/cold-blooded/cover-mockup.jpg',
+      '/images/cold-blooded/cover-mockup.webp',
       512,
       342,
       'Cold Blooded booklet cover on a grey surface: title over a grid of black-and-white athlete photos and blue squares.',
@@ -171,13 +171,13 @@ export const projects = [
       { label: 'Typeface', text: 'IBM Plex Mono', large: true }
     ],
     cover: img(
-      '/images/nothing-but-time/package-front-back.jpg',
+      '/images/nothing-but-time/package-front-back.webp',
       2000,
       1790,
       'Nothing But Time album package: orange collage front sleeve and blue collage back sleeve, each with a green vinyl record sliding out.'
     ),
     hero: img(
-      '/images/nothing-but-time/package-front-back.jpg',
+      '/images/nothing-but-time/package-front-back.webp',
       2000,
       1790,
       'Nothing But Time album package: orange collage front sleeve and blue collage back sleeve, each with a green vinyl record sliding out.'
@@ -269,7 +269,7 @@ export const projects = [
     role: 'During my internship at Media Production Group at Auburn University, I contributed to a variety of branding, editorial, and promotional design projects for Auburn University and its partners. I contributed on the Harbert Magazine, the Winchester Gala Program, Harbert College of Business merchandise, and the visual identity for the We Spoke Podcast, while also creating digital and print assets for event promotions. I helped develop cohesive visual systems across multiple platforms, focused on strong storytelling, consistency, and professional communication.',
     tools: null,
     cover: img(
-      '/images/experience/harbert-magazine.jpg',
+      '/images/experience/harbert-magazine.webp',
       1328,
       1648,
       'Harbert Magazine, Fall 2025 cover: “A Prepared Mind” spelled in Scrabble tiles on a wooden table.'
@@ -292,7 +292,7 @@ export const projects = [
             'Back of a navy T-shirt with an orange Harbert Graduate Business Programs crest featuring an eagle and campus buildings.'
           ),
           img(
-            '/images/experience/harbert-magazine.jpg',
+            '/images/experience/harbert-magazine.webp',
             1328,
             1648,
             'Harbert Magazine, Fall 2025 cover: “A Prepared Mind” spelled in Scrabble tiles on a wooden table.'
