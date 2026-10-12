@@ -65,7 +65,7 @@ export const projects = [
   {
     slug: 'momentum3',
     category: 'Branding',
-    title: 'Momentum3',
+    title: 'Momentum³',
     kind: 'Academic Project',
     focus: 'Brand Identity System',
     role: 'I created the Momentum3 brand system, building a bold identity centered on movement and clarity. I designed the mark to capture forward motion with clean geometry and a tight, modern palette. I kept the overall direction minimal and purposeful, giving the brand a clear sense of drive and progression.',
