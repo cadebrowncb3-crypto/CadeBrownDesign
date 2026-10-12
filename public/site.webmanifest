@@ -1,0 +1,11 @@
+{
+  "name": "Cade Brown — Design Portfolio",
+  "short_name": "Cade Brown",
+  "icons": [
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ],
+  "theme_color": "#0d0d0d",
+  "background_color": "#edeee5",
+  "display": "browser"
+}
