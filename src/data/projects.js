@@ -88,6 +88,16 @@ export const projects = [
     sections: [
       {
         type: 'feature',
+        label: 'Identity',
+        image: img(
+          '/images/momentum3/marks.png',
+          1838,
+          962,
+          'Momentum3 marks: primary lockup (pixel-arrow mark over the MOMENTUM³ wordmark, black on yellow) for the default lockup; secondary stacked “MOME / NTUM³” wordmark in white on black for wide formats, signage and apparel strips; tertiary single-line wordmark in black on off-white for apparel tags.'
+        )
+      },
+      {
+        type: 'feature',
         image: img(
       '/images/momentum3/event-arch.webp',
       1584,
