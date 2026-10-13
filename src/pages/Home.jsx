@@ -119,10 +119,9 @@ export default function Home() {
 
         <div className="hero__aside">
           <p className="label">
-            {site.name} • {site.tagline}
+            {site.tagline}
           </p>
           <p className="hero__statement">{emphasize(about.intro, ['feel', 'unruly'])}</p>
-          <p className="label">Portfolio</p>
         </div>
 
         <FeatureCycler />

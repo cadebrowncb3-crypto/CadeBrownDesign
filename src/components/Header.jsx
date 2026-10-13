@@ -53,7 +53,6 @@ export default function Header() {
           {site.name}
           <sup>©</sup>
         </Link>
-        <span className="topbar__meta">Portfolio</span>
       </div>
 
       <nav className={`navbox ${open ? 'is-open' : ''}`} aria-label="Primary">
